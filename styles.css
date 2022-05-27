@@ -624,6 +624,10 @@ body {
     .credit {
         text-align: center;
     }
+    
+        .credit {
+        margin-top: 15rem;
+    }
 }
 
 .container-p {
