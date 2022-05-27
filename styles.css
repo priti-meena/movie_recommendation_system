@@ -126,7 +126,7 @@ html {
         top: -1000px;
         opacity: 0;
         transition: all 0.5s ease;
-        height: 50vh;
+        height: 70vh;
         z-index: -1;
         background: #131313;
     }
@@ -320,12 +320,12 @@ html {
         width: 100%;
         margin: 0 auto;
         height: 90vh;
-        padding: 0 50px 0 0;
+        padding: 0 50px 0 10px;
     }
 
     .main_img--container {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
     }
 
     .main__content {
@@ -366,6 +366,11 @@ html {
     .main__btn {
         padding: 12px 36px;
         margin: 2.5rem 0;
+    }
+    
+        .main_img--container {
+        width: 350px;
+        height: 350px;
     }
 }
 
