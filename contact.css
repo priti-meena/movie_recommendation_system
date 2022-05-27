@@ -595,4 +595,8 @@ body {
     .credit {
         text-align: center;
     }
+    
+    .credit {
+        margin-top: 0.1rem;
+    }
 }
