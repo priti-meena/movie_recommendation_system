@@ -1,4 +1,4 @@
-# Code of Conduct - Movie Recommendation Engine
+# Code of Conduct - Movie Recommendation System
 
 ## Our Pledge
 
