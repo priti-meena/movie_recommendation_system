@@ -323,11 +323,6 @@ html {
         padding: 0 50px 0 10px;
     }
 
-    .main_img--container {
-        width: 400px;
-        height: 400px;
-    }
-
     .main__content {
         text-align: center;
         margin-bottom: 4rem;
@@ -345,6 +340,11 @@ html {
     .main__content p {
         margin-top: 1rem;
         font-size: 1.5rem;
+    }
+
+    .main_img--container {
+        width: 400px;
+        height: 400px;
     }
 }
 
@@ -367,8 +367,8 @@ html {
         padding: 12px 36px;
         margin: 2.5rem 0;
     }
-    
-        .main_img--container {
+
+    .main_img--container {
         width: 350px;
         height: 350px;
     }
@@ -624,8 +624,8 @@ body {
     .credit {
         text-align: center;
     }
-    
-        .credit {
+
+    .credit {
         margin-top: 15rem;
     }
 }
