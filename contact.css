@@ -550,10 +550,8 @@ body {
     padding: 2rem;
     font-weight: bolder;
     font-size: larger;
-
     color: var(--color-white);
     margin-top: 10rem;
-
 }
 
 .fa {
@@ -595,7 +593,7 @@ body {
     .credit {
         text-align: center;
     }
-    
+
     .credit {
         margin-top: 0.1rem;
     }
