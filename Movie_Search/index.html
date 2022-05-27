@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Search</title>
+    <link rel="shortcut icon" types="" image" href="images/movie.jpg">
+
+    <!-- CSS and External Libraries-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <!--<link rel="stylesheet" href="INSERT_ASSET_FOR_REST">-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="col-lg-5  col-18 bg-white " id="left">
+
+                <div class="left-contents">
+                    <!------- USED FOR STICKY SEARCH ---->
+                    <div id="stick-here"></div>
+                    <div id="stickThis">
+                        <!------- END STICKY SEARCH ---->
+
+                        <!------------ MOVIE SEARCH FORM --------------------->
+                        <form class="mx-5 sidebar-item">
+                            <div class="form-row mt-5 ">
+                                <label for="movie-input">
+                                    <h3><i class="fas fa-film"></i> MOVIE SEARCH</h3>
+                                </label>
+                                <input type="" class="form-control shadow" id="movie-input"
+                                    placeholder="Enter Movie Title">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-3 mb-5" id="submit"><i
+                                    class="fas fa-search"></i> Search
+                                Movie</button>
+                        </form>
+
+                        <!------------ MOVIE SEARCH FORM --------------------->
+
+
+                        <!-------------- FAVORITE SECTION ------------------------->
+                        <div class="card my-4" id="favorite-section">
+                            <h5 class="card-header"><i class="far fa-heart"></i> Saved Movies</h5>
+                            <div class="card-body scroll" id="list-favorites">
+
+                                <!-------- INSERT FAVORITE CARDS HERE ------------>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-5 h-100 float-left" id="hidden-column"></div> -->
+            <div class="col-lg-7 bg-dark" id="right">
+
+                <!------------------ MOVIE NOT FOUND DISPLAY ----------------->
+                <div class="card mt-1" id="no-movie-info">
+                    <div class="card-body mr-n3">
+                        <h3>Movie was not found. <i class="far fa-frown"></i></h3>
+                    </div>
+                </div>
+
+                <!------------------ MOVIE NOT FOUND DISPLAY END ----------------->
+
+                <!-------------- MOVIE INFO & TRAILER CARD ------------------------->
+                <div class="card mt-1" id="movie-info">
+                    <h5 class="card-header" id="movie-title">The Lion King</h5>
+                    <div class="card-body mr-n3">
+
+                        <!----------------------- MOVIE INFO------------------->
+                        <div class="row">
+
+
+                            <!--MOVIE RATINGS & FAV-->
+                            <div class="col-12">
+
+                                <div class="d-flex bd-highlight mt-n2">
+
+                                    <!--------- Favorite Icon  ------->
+                                    <div class="mr-auto p-2 bd-highlight">
+                                        <i class="fas fa-heart fa-lg" id="fav-heart"></i>
+                                    </div>
+
+                                    <!--------- Freshness Icon  ------->
+                                    <div class="p-2 bd-highlight"><img src="assets/images/metacritic.png"
+                                            alt="Rotten Tomatoes Freshness" id="rt-fresh-img"><span
+                                            id="metacritic-score">89%</span></div>
+
+                                    <!--------- Audience Icon  ------->
+                                    <div class="p-2 bd-highlight"><img src="assets/images/tr-audience.png"
+                                            alt="Rotten Tomatoes Audience" id="rt-audience-img"><span
+                                            id="rt-aud-score">99%</span></div>
+
+                                    <!--------- IMDB Icon  ------->
+                                    <div class="p-2 bd-highlight"><img src="assets/images/imdb.png" alt="IMDB"
+                                            id="imdb-img"><span id="imdb-score">73%</span></div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- MOVIE POSTER-->
+                            <div class="col-lg-5 col-12">
+                                <img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg"
+                                    class="w-100 img-fluid rounded pr-4" alt="Movie Poster" id="movie-poster">
+                            </div>
+
+
+                            <!-- MOVIE DETAILS ---->
+                            <div class="col-lg-7 col-12 ">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item my-n1">
+                                        <h6>Genre:</h6>
+                                        <h6 id="movie-genre">Drama, Animated</h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Rated:</h6>
+                                        <h6 id="movie-rated">R</h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Runtime:</h6>
+                                        <h6 id="movie-runtime">1 hour 30 min</h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Release Date:</h6>
+                                        <h6 id="movie-release">Aug. 3rd, 1999</h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Director:</h6>
+                                        <h6 id="movie-director">Christopher Nolan</h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Actors:</h6>
+                                        <h6 id="movie-actors">Josh Brolin, Sean Astin, Bruce Willis, Lili Reinhardt,
+                                            Michelle Pfeiffer
+                                        </h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Plot:</h6>
+                                        <p id="movie-plot">This Disney animated feature follows the adventures of the
+                                            young lion Simba (Jonathan Taylor Thomas), the heir of his father, Mufasa
+                                            (James Earl Jones). Simba's wicked uncle, Scar (Jeremy Irons), plots to
+                                            usurp
+                                            Mufasa's throne by luring father and son into a stampede of wildebeests. But
+                                            Simba escapes, and only Mufasa is killed. Simba returns as an adult (Matthew
+                                            Broderick) to take back his homeland from Scar with the
+                                            help of his friends Timon (Nathan Lane) and Pumbaa (Ernie Sabella).
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <!--------------------- TRAILER SECTION --------------------->
+                        <div class="embed-responsive embed-responsive-16by9  mt-2 rounded" id="trailer">
+                        </div>
+
+                        <!------------------- END TRAILER SECTION --------------------->
+                    </div>
+                </div>
+
+                <!-------------- END MOVIE INFO CARD ------------------------->
+            </div>
+        </div>
+    </div>
+    <!-- Jquery & Javascript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Google Maps API ID-->
+    <script src="assets/js/gracenote.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZO_pTbNs6Aq-YWHEM7Z_42_eqTDuOwd4&libraries=places&callback=initMap"></script>
+
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.js"></script>
+
+</body>
+
+</html>
