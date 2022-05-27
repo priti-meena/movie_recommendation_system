@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Icons Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Eat & Watch</title>
+    <link rel="shortcut icon" types="" image" href="cutlery.png">
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header class="hero container">
+
+        <div class="row">
+            <div class="col s12 center-align">
+                <h1>Eat & Watch 🍕</h1>
+            </div>
+
+            <div class="col s12 center-align">
+
+                <p>Watching a nice movie while eating good food sounds great until you can't decide on what!</p>
+                </break>
+                <p>Never stress again. We're here to help you. Our dinner and movie generator will tell you what you're
+                    going to watch and eat tonight.</p>
+                </break>
+                <p>If you have an idea of what you'd like, just enter in a meal type or pick a movie genre. We'll find
+                    something to suit your preferences. </p>
+                </break>
+                <p>If you have no clue, don't worry, just leave them empty and click on the search button. We'll find
+                    something for you!</p>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="container" id="movie">
+            <div class="row">
+                <div id="select-movie" class="col s12 m6">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <span class="material-icons">movie_filter</span>
+                        </div>
+                        <div class="card-title">
+                            <h3>Select a Genre</h3>
+                        </div>
+                        <div class="card-action">
+                            <form id="movie-form">
+                                <div class="form-group input-field">
+                                    <label class="active" for="genres">Select your Genre(s)</label>
+                                    <!-- Label left empty for now, can change if we think of something good -->
+                                    <select name="genres" class="genre-options" id="genres-form" multiple>
+                                        <!-- Values may need to be adjusted based on how they are stored in API -->
+                                        <!-- Leaving Values as is for now -->
+                                        <option value="28">Action</option>
+                                        <option value="12">Adventure</option>
+                                        <option value="16">Animation</option>
+                                        <option value="35">Comedy</option>
+                                        <option value="80">Crime</option>
+                                        <option value="99">Documentary</option>
+                                        <option value="18">Drama</option>
+                                        <option value="10751">Family</option>
+                                        <option value="14">Fantasy</option>
+                                        <option value="36">History</option>
+                                        <option value="27">Horror</option>
+                                        <option value="10402">Music</option>
+                                        <option value="9648">Mystery</option>
+                                        <option value="10749">Romance</option>
+                                        <option value="878">Science Fiction</option>
+                                        <option value="10770">TV Movie</option>
+                                        <option value="53">Thriller</option>
+                                        <option value="10752">War</option>
+                                        <option value="37">Western</option>
+                                    </select>
+                                    <button type="submit" class="btn" id="movie-btn">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="display-movie" class="col s12 m6">
+                    <div class="card medium">
+                        <div class="thumbnail text-center">
+                            <!-- If possible, try to append movie poster and title to the <a> element, this way it can be linked to the actual IMDB page -->
+                            <a>
+                                <div class="card-image">
+                                    <picture id="movie-poster">
+                                        <!-- <img> tag used here to append movie poster fetched by API -->
+                                    </picture>
+                                </div>
+                                <div class="caption card-title" id="movie-title">
+                                    <!-- <p> tag used here to append title fetched by API -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="dinner">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <span class="material-icons">restaurant_menu</span>
+                        </div>
+                        <div class="card-title">
+                            <h3>Search by Cuisine</h3>
+                        </div>
+                        <div class="card-action">
+                            <form id="food-form">
+                                <div class="input-field">
+                                    <label class="active" for="food"></label>
+                                    <!-- Label left empty for now, can change if we think of something good -->
+                                    <input placeholder="Or leave it blank!" name="food" id="food" type="text"
+                                        autofocus="true" class="form-input" />
+                                    <button type="submit" class="btn" id="food-btn">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card medium">
+                        <div class="thumbnail text-center">
+                            <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
+                            <a>
+                                <div class="card-image">
+                                    <picture id="food-pic">
+                                        <!-- <img> tag used here to append image fetched by API -->
+                                    </picture>
+                                </div>
+                                <div class="caption card-title" id="recipe-name">
+                                    <!-- <p> tag used here to append title fetched by API -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- End Main Content -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
