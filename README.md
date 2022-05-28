@@ -21,18 +21,38 @@ Check Out The Deployment Of This Project Here :
 
 ## Presentation Of This Project
 
-[Recommend Me]
+[Recommend Me](https://docs.google.com/presentation/d/1EYYzY6Qhkf86ZUDR1S9A1CYK5qQLLlZc/edit?usp=sharing&ouid=117712577124739053028&rtpof=true&sd=true)
 
 
 ## Features
 
-- Provides four systems for user
+- Provides The Customer With Four Models To Assist Him: 
+  - Title-based Movie Recommendations
+  - Genre-based Movie Recommendations
+  - A Movie And Dinner Recommender
+  - A Movie Search Platform.
 - Content-based Filtering
-- Imdb Direct Link
-- Movie And Genre Based Filering
-- Option To Select Multiple Genres
-- A movie could also be chosen based on its rating.
-- The range of movies available can be increased.
+- IMDb Direct Link
+- Option To Select Multiple Genres/movie-titles
+- Sort Movies Based On Ratings From Thousands Of Users
+- Search For Movies Using Keywords (Actors, Tags, Directors Etc.)
+- Easy-to-use, Smooth And Responsive Ui
+- Add Movies To Your Watch-list
+- Accurate Recommendations
+- Watch The Trailer Of A Movie Directly On You-tube
+- Fetch Movie Poster As Well
+- Know Details About The Movie Like Genre, Ratings, Actors Etc.
+
+
+## Timeline For Development :
+
+- Week 1: Exploring Several Recommendation Algorithms And Completing The Project's Initial Documentation.
+
+- Week 2: Developing The Backend And Working On The Data Set.
+
+- Week 3: Web Page Design, Integration Of Multiple Components, And Frontend Development
+
+- Week 4: Putting The Finishing Touches On The Project.
 
 
 ## Run Locally
@@ -56,14 +76,14 @@ Start the server
 ```
 
 
-## Tech Stack
-
-**WEB TECHNOLOGIES**
+## Technologies Used
 
 ```bash
-Backend -- Python , Numpy , Pandas 
-
-FrontEnd -- HTML,CSS,Streamlit,JavaScript
+CLIENT - Streamlit
+SERVER - Numpy, Pandas, Scikit-Learn
+BACK-END - Python , Numpy , Pandas, Jupyter Notebook
+FRONT-END - HTML,CSS ,JavaScript
+API's - MovieDB API, TheMealDB API etc.
 ```
 
 ## Screenshots
@@ -84,11 +104,25 @@ FrontEnd -- HTML,CSS,Streamlit,JavaScript
 
 ![6](https://github.com/priti-meena/movie_recommendation_system/blob/main/Screenshots/6.png?raw=true)
 
+## Various Models
+### Movie Recommendation Based On Title 🍿
+Recommends Movies Depending On The User's Input Of The Title(s) Of The Movie(s). A User Can Also Get Suggestions Depending On The Keywords Entered. There Are Several Filters That Can Be Used To Generate Recommendations. A User Can Also Add A Movie To His Or Her Wish List.
 
+### Movie Recommendation Based On Genre 🍿 
+Recommends Movies Based On The User's Chosen Genre(s).
+A User Can Also Sort Movies Depending On Their Popularity And Ratings. A User Can Also Add A Movie To His Or Her Wish List.
+
+### Eat & Watch 🍿
+Recommends A Movie Based On The Selected Genre(s). In Addition, Based On The Cuisine Entered, Suggest A Meal Dish.
+
+### Movie-Search ▶
+Along With This, There Is The Movie-Search Model, Which Generates Information About The Movie Name Entered By The User, Such As Movie Rating, Actors, Plot, And So On. It Also Has A Feature That Allows You To Watch The Movie's Trailer. A User Can Also Add A Movie To His Or Her Wish List.
 
 ## Learning From The Project
 
+From how to sort information stored in a DataFrame according to different conditions to how to get useful information, the project taught me a lot about data management and handling. I looked at a lot of different recommendation models before coming up with this one that gives the user reliable recommendations.
 
+This project made use of content-based filtering, cosine similarity, and the KNN Algorithm, among other things. Making the application more user friendly in general took up a significant portion of the development period. Web scraping was also important since acquiring reliable data was a lot more important and time-consuming operation than constructing ML models based on that data. With other features such as movie posters, IMDb links, movie information, and watching trailers, I've tried my best to provide as accurate suggestions as possible.
 
 ## Acknowledgements
 
