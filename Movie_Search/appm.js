@@ -190,10 +190,9 @@ $(document).ready(function() {
 
     function getYoutubeTrailer(movie, year) {
         // --------------------------- Youtube API Use -----------------------------------
-        // Caren's API Key
-        var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + movie + " " + year + " trailer&key=AIzaSyANwe_R8GJEK-5rYI2aufq2Gh2HZjQcOJI";
-        // Jeff's API Key
-        // var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + movie + " " + year + " trailer&key=AIzaSyBMkzMarib_oMDFs80Cc_s1uSr5Tg8n_Jo";
+        //API key
+        var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + movie + " " + year + " trailer&key=AIzaSyAk6086QEzGB_VX00BNa7I2pJoZ6E7oM-A";
+        
 
         $.ajax({
             url: youtubeQueryURL,
