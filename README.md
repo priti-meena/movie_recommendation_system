@@ -57,7 +57,7 @@ Check Out The Deployment Of This Project Here :
 
 ## Run Locally
 
-Clone the project
+Clone the project by using Command Prompt
 
 ```bash
   git clone https://github.com/priti-meena/movie_recommendation_system.git
